@@ -4,7 +4,6 @@ import { usePersons } from '../../../contexts/PersonsContext';
 
 import {
   HomeBanner,
-  HomeInformation,
   WelcomeText,
   SearchList,
   Pagination,
@@ -21,7 +20,6 @@ const Home: React.FC = () => {
 
   useEffect(() => {
     const initializeData = async () => {
-
       await searchPersons('');
     };
     initializeData();
@@ -30,9 +28,8 @@ const Home: React.FC = () => {
   return (
     <Default title={title}>
       <HomeBanner />
-      <HomeInformation />
       <WelcomeText />
-      <SearchList persons={persons}/>
+      <SearchList persons={persons} />
       <Pagination />
       <Objectives />
       <TeamDesenvolvedor />
